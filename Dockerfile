@@ -18,7 +18,6 @@ RUN ( \
             coreutils \
             dnsutils \
             iputils-ping \
-            iproute2 \
             net-tools \
             iptables \
             figlet \
