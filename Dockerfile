@@ -15,6 +15,8 @@ RUN ( \
 RUN ( \
         apt-get install -qy --no-install-recommends \
             ca-certificates \
+            aptitude \
+            lsb-release \
             coreutils \
             dnsutils \
             iputils-ping \
