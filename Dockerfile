@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-FROM buildpack-deps:wheezy
+FROM buildpack-deps:jessie
 
 MAINTAINER Aleksandr Zykov <tiger@vilijavis.lt>
 
