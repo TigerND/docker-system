@@ -20,16 +20,7 @@ RUN ( \
 
 RUN ( \
         apt-get install -qy --no-install-recommends \
-            software-properties-common \
-    &&  apt-add-repository ppa:ansible/ansible \
-    &&  apt-get update -q \
-    &&  apt-get install -qy --no-install-recommends \
-            ansible \
-    &&  apt-get clean -qy \
-    )
-
-RUN ( \
-        apt-get install -qy --no-install-recommends \
+            python-pip \
             aptitude \
             lsb-release \
             coreutils \
@@ -46,6 +37,11 @@ RUN ( \
     &&  apt-get clean -qy \
     )
     
+RUN ( \
+        pip install \
+            ansible \
+    )
+
 RUN ansible --version
 
 RUN figlet 'Ready!'
