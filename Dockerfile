@@ -7,14 +7,20 @@ MAINTAINER Aleksandr Zykov <tiger@vilijavis.lt>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN ( \
-        apt-get update -q &&\
-        apt-get upgrade -qy --no-install-recommends \
-    ) && \
-    apt-get clean -qy
-
+        apt-get update -q \
+    &&  apt-get upgrade -qy --no-install-recommends \
+    &&  apt-get clean -qy \
+    )
+    
 RUN ( \
         apt-get install -qy --no-install-recommends \
             ca-certificates \
+    &&   apt-get clean -qy \
+    )
+
+RUN ( \
+        apt-get install -qy --no-install-recommends \
+            python-pip \
             aptitude \
             lsb-release \
             coreutils \
@@ -28,7 +34,14 @@ RUN ( \
             bzip2 \
             unzip \
             zip \
-    ) && \
-    apt-get clean -qy
+    &&  apt-get clean -qy \
+    )
+    
+RUN ( \
+        pip install \
+            ansible \
+    )
+
+RUN ansible --version
 
 RUN figlet 'Ready!'
