@@ -38,7 +38,8 @@ RUN ( \
     )
     
 RUN ( \
-        pip install \
+        pip install --upgrade pip \
+    &&  pip install \
             ansible \
     )
 
