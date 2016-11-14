@@ -20,9 +20,12 @@ RUN ( \
 
 RUN ( \
         apt-get install -qy --no-install-recommends \
-            python-pip \
             aptitude \
             lsb-release \
+            python-pip \
+            python-dev \
+            libxml2-dev \
+            libxslt-dev \
             coreutils \
             dnsutils \
             iputils-ping \
