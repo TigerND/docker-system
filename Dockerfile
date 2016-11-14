@@ -42,8 +42,8 @@ RUN ( \
     
 RUN ( \
         pip install --upgrade pip \
-    &&  pip install -U setuptools \
-    &&  pip install \
+    &&  /usr/local/bin/pip install -U setuptools \
+    &&  /usr/local/bin/pip install \
             ansible \
     )
 
