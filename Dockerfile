@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-FROM buildpack-deps:xenial
+FROM buildpack-deps:artful
 
 MAINTAINER Aleksandr Zykov <tiger@vilijavis.lt>
 
