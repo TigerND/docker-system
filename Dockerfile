@@ -41,7 +41,7 @@ RUN ( \
     )
     
 RUN ( \
-        pip install --upgrade pip \
+        pip install --upgrade pip==9.0.3 \
     &&  pip install -U setuptools \
     &&  pip install \
             ansible \
